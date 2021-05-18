@@ -14,7 +14,14 @@ class CreateDevelopersTable extends Migration
     public function up()
     {
         Schema::create('developers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('experience','20');
+            $table->mediumText('aboutme');
+            $table->mediumText('curriculum');
+            //$table->mediumText('photo');
+            $table->mediumText('portafolio');
+            $table->unsignedInteger('idUserFK');
+            $table->foreign('idUserFK')->references('id')->on('users');
             $table->timestamps();
         });
     }

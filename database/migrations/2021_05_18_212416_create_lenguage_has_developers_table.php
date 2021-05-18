@@ -14,7 +14,10 @@ class CreateLenguageHasDevelopersTable extends Migration
     public function up()
     {
         Schema::create('lenguage_has_developers', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('idLenguageFK');
+            $table->foreign('idLenguageFK')->references('id')->on('lenguages');
+            $table->unsignedInteger('idDeveloperFK');
+            $table->foreign('idDeveloperFK')->references('id')->on('developers');
             $table->timestamps();
         });
     }

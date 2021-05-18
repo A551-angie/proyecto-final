@@ -14,7 +14,8 @@ class CreateSkullsTable extends Migration
     public function up()
     {
         Schema::create('skulls', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nameSkill','100');
             $table->timestamps();
         });
     }

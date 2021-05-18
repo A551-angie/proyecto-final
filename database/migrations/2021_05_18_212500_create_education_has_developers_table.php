@@ -14,7 +14,10 @@ class CreateEducationHasDevelopersTable extends Migration
     public function up()
     {
         Schema::create('education_has_developers', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('idEducationFK');
+            $table->foreign('idEducationFK')->references('id')->on('education');
+            $table->unsignedInteger('idDeveloperFK');
+            $table->foreign('idDeveloperFK')->references('id')->on('developers');
             $table->timestamps();
         });
     }

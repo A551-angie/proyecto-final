@@ -14,7 +14,10 @@ class CreateDevelopersHasTegnologiesTable extends Migration
     public function up()
     {
         Schema::create('developers_has_tegnologies', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('idDeveloperFK');
+            $table->foreign('idDeveloperFK')->references('id')->on('developers');
+            $table->unsignedInteger('idTegnologyFK');
+            $table->foreign('idTegnologyFK')->references('id')->on('tegnologies');
             $table->timestamps();
         });
     }

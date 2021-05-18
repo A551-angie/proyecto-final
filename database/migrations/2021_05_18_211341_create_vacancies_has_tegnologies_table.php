@@ -14,7 +14,11 @@ class CreateVacanciesHasTegnologiesTable extends Migration
     public function up()
     {
         Schema::create('vacancies_has_tegnologies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('idVacancyFK');
+            $table->foreign('idVacancyFK')->references('id')->on('vacancies');
+            $table->unsignedInteger('idTegnologyFK');
+            $table->foreign('idTegnologyFK')->references('id')->on('tegnologies');
             $table->timestamps();
         });
     }

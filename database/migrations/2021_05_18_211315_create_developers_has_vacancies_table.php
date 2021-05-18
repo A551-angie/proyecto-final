@@ -14,7 +14,11 @@ class CreateDevelopersHasVacanciesTable extends Migration
     public function up()
     {
         Schema::create('developers_has_vacancies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('idVacancyFK');
+            $table->foreign('idVacancyFK')->references('id')->on('vacancies');
+            $table->unsignedInteger('idDeveloperFK');
+            $table->foreign('idDeveloperFK')->references('id')->on('developers');
             $table->timestamps();
         });
     }

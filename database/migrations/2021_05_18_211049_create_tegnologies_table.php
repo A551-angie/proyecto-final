@@ -14,7 +14,8 @@ class CreateTegnologiesTable extends Migration
     public function up()
     {
         Schema::create('tegnologies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nameTegnology','100');
             $table->timestamps();
         });
     }

@@ -14,7 +14,10 @@ class CreateSkillsHasDevelopersTable extends Migration
     public function up()
     {
         Schema::create('skills_has_developers', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('idSkillFK');
+            $table->foreign('idSkillFK')->references('id')->on('skulls');
+            $table->unsignedInteger('idDeveloperFK');
+            $table->foreign('idDeveloperFK')->references('id')->on('developers');
             $table->timestamps();
         });
     }
