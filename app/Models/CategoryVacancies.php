@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryVacancies extends Model
 {
     use HasFactory;
+
+
+    public function vacancies(){
+
+        return $this->belongsToMany(vacancies::class);
+
+        
+    }
 }
