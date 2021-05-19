@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'proyecto final',
+    'title' => 'AdminLTE 3',
     'title_prefix' => '',
     'title_postfix' => '',
 
