@@ -17,6 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/recruiter/index', function () {
+    return view('recruiter.index');
+});
+
+Route::get('/recruiter/create', function () {
+    return view('recruiter.create');
+});
+
+
+
+
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
