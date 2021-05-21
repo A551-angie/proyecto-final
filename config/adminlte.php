@@ -227,8 +227,8 @@ return [
     'menu' => [
         [
             'text' => 'search',
-            'search' => true,
-            'topnav' => true,
+            'search' => false,
+            'topnav' => false,
         ],
         [
             'text' => 'blog',
@@ -236,7 +236,7 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
+            'text'        => 'Publica una vacante',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
@@ -245,14 +245,14 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'Perfil',
-            'url'  => 'admin',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
-            'can' => 'Admin',
         ],
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+            'can' => 'developerpermi',
         ],
        
     ],

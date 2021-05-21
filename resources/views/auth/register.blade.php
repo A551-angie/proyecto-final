@@ -15,7 +15,7 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Correo Electronico') }}" />
+                <x-jet-label for="email" value="{{ __('Correo Electrónico') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
@@ -29,9 +29,14 @@
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Elige un rol') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="text" name="password_confirmation" required autocomplete="new-password" />
+            <div>
+                <select class="border-gray-300 focus:border-indigo-300 
+                focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md 
+                shadow-sm block mt-1 w-full text-sm text-gray-600" name="role_id" id="role_id" required>
+                    <option value="" disabled selected hidden>Selecciona la acción</option>
+                    <option value="recruiter">Empresa</option>
+                    <option value="developers">Desarrollador</option>
+                </select>
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())

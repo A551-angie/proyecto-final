@@ -65,7 +65,6 @@ class User extends Authenticatable
     public function developer(){
 
         return $this->hasOne(Developers::class);
-
         
     }
 
@@ -74,6 +73,9 @@ class User extends Authenticatable
 
         return $this->hasOne(recruiters::class);
 
-        
+    }
+
+    public function adminlt(){
+        return 'recruiter/developers';
     }
 }
