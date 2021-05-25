@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
 <<<<<<< .merge_file_QjofnU
 <<<<<<< .merge_file_CKqkoE
     "content-hash": "c0cfa28158d4445fb2c2200ccb74e3bf",
@@ -13,6 +14,9 @@
 =======
     "content-hash": "4abf7c34e4aa2b2e0af19facaaf31494",
 >>>>>>> .merge_file_ecnVb1
+=======
+    "content-hash": "a561c4fd55a4a8f69d3b64c41e08250d",
+>>>>>>> desarrollo
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
