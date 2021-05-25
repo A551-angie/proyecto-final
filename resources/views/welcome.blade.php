@@ -61,7 +61,7 @@
                     <a class="px-4 py-1 text-sm font-medium text-center text-gray-200 transition-colors duration-300 transform border rounded hover:bg-indigo-400" href="#">Get In Touch</a>
                     @if (Route::has('login'))
                     @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Dashboard</a>
+                    <a href="{{ url('/admin') }}" class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Mi perfil</a>
                     @else
                     <a href="{{ route('login') }}" class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Log in</a>
 
