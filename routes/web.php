@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth:sanctum', 'verified'])->name('dashboard');
+
+
 Route::get('/recruiter/index', function () {
     return view('recruiter.index');
 });
@@ -24,12 +34,3 @@ Route::get('/recruiter/index', function () {
 Route::get('/recruiter/create', function () {
     return view('recruiter.create');
 });
-
-
-
-
-
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
