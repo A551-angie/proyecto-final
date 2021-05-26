@@ -36,3 +36,8 @@ Route::get('/recruiter/index', function () {
 Route::get('/recruiter/create', function () {
     return view('recruiter.create');
 });
+
+Route::get('/developer/seeVacancies',function(){
+    return view ('developer.seeVacancies');
+
+});
