@@ -22,7 +22,12 @@ class EducationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            //datos falsos
+            'nameEducation'=>$this-> faker-> word,
+            
+            'level'=>$this -> faker -> sentence,
+
+
         ];
     }
 }
