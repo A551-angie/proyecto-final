@@ -75,7 +75,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     }
 
-    public function adminlt(){
+    public function adminlte_desc(){
         return 'recruiter/developers';
     }
 }

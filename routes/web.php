@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\HomeController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,7 +26,7 @@ Route::get('/', function () {
 
 Route::get('/admin', function () {
     return view('admin.index');
-})->middleware(['auth:sanctum', 'verified'])->name('admin');
+})->middleware(['auth:sanctum', 'verified'])->name('dashboard');
 
 
 Route::get('/recruiter/index', function () {
