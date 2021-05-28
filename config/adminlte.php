@@ -242,7 +242,7 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'developers',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'developerpermi',
@@ -254,6 +254,7 @@ return [
             'can' => 'developerpermi',
         ],
         [
+
             'text' => 'ver vacantes publicadas',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',

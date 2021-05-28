@@ -75,7 +75,11 @@ class User extends Authenticatable implements MustVerifyEmail
 
     }
 
+    //public function permission(){
+    //    return $this->hasOne(permission::class);
+    //}
+
     public function adminlte_desc(){
-        return 'recruiter/developers';
+        return 'developers/recruiter';
     }
 }
