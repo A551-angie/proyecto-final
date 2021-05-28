@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Developers;
 use Illuminate\Database\Seeder;
 
-class DevelopersHasTegnologiesSeeder extends Seeder
+class DevelopersSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,5 +15,6 @@ class DevelopersHasTegnologiesSeeder extends Seeder
     public function run()
     {
         //
+        // Developers::factory(10)->create();
     }
 }

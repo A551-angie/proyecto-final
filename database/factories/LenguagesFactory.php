@@ -23,6 +23,7 @@ class LenguagesFactory extends Factory
     {
         return [
             //
+            // 'lenguage'
         ];
     }
 }

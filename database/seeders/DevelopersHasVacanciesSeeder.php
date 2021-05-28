@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\developersHasVacancies;
+
 use Illuminate\Database\Seeder;
 
 class DevelopersHasVacanciesSeeder extends Seeder

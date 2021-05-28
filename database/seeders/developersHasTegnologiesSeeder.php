@@ -2,10 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\tegnologies;
+use App\Models\developersHasTegnologies;
 use Illuminate\Database\Seeder;
 
-class TegnologiesSeeder extends Seeder
+
+
+class developersHasTegnologiesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +17,6 @@ class TegnologiesSeeder extends Seeder
     public function run()
     {
         //
-        // tegnologies::factory(10)->create();
+        // developersHasTegnologies::factory(10)->create();
     }
 }

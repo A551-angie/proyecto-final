@@ -23,6 +23,8 @@ class CountryFactory extends Factory
     {
         return [
             //
+            // 'contry',
+            // 'idUserFk'
         ];
     }
 }

@@ -255,7 +255,7 @@ return [
         ],
         [
             'text' => 'ver vacantes publicadas',
-            'url'  => 'admin/settings',
+            'url'  => './developer/seeVacancies',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'recruiterpermi',
         ],

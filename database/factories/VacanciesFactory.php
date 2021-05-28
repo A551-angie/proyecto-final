@@ -23,6 +23,17 @@ class VacanciesFactory extends Factory
     {
         return [
             //
+            // 'title',
+            // 'experinceRequired',
+            // 'salary',
+            // 'location',
+            // 'currency',
+            // 'descriptionVacancy',
+            // 'state',
+            // 'enddate',
+            // 'idCategoryvacancyfk',
+            // 'idRecrutierFk',
+            
         ];
     }
 }
