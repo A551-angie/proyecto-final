@@ -36,9 +36,9 @@ Route::get('/recruiter/create', function () {
     return view('recruiter.create');
 });
 
-Route::get('/developer/seeVacancies',function(){
-    return view ('developer.seeVacancies');
+// Route::get('/developer/seeVacancies',function(){
+//     return view ('developer.seeVacancies');
 
-});
+// });
 
-Route::get('Developer',DeveloperController::class);
+// Route::resource('Developer', DeveloperController::class)->name;
