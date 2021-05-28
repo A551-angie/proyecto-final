@@ -28,6 +28,12 @@
                 <x-jet-label for="password_confirmation" value="{{ __('Confirme Contraseña') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
+           <!-- <div class="mt-4">
+                <input type="radio" id="male" name="role_id" value="recruiter" required>
+                <label for="male">Empresa</label><br>
+                <input type="radio" id="female" name="role_id" value="developers" required>
+                <label for="female">Desarrollador</label><br>
+            </div>-->  
 
             <div>
                 <select class="border-gray-300 focus:border-indigo-300 
