@@ -23,6 +23,9 @@ class CategoryVacanciesHasVacanciesFactory extends Factory
     {
         return [
             //
+            // 'idVacancyFk',
+            // 'idtegnologyFk'
+
         ];
     }
 }

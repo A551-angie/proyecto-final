@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\developersHasTegnologies;
+use App\Models\tegnologies;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class DevelopersHasTegnologiesFactory extends Factory
+class tegnologiesFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = developersHasTegnologies::class;
+    protected $model = tegnologies::class;
 
     /**
      * Define the model's default state.
@@ -23,6 +23,8 @@ class DevelopersHasTegnologiesFactory extends Factory
     {
         return [
             //
+            // 'nameTegnology'=> $this->faker->randomDigit()
+
         ];
     }
 }

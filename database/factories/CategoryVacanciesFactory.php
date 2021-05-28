@@ -23,6 +23,7 @@ class CategoryVacanciesFactory extends Factory
     {
         return [
             //
+            // 'categoryName'
         ];
     }
 }

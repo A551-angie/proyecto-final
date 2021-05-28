@@ -254,8 +254,10 @@ return [
             'can' => 'developerpermi',
         ],
         [
-            'text' => 'ver recruiter publicadas',
-            'url'  => 'admin/settings',
+
+            'text' => 'ver vacantes publicadas',
+            'url'  => './developer/seeVacancies',
+
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'recruiterpermi',
         ],

@@ -2,17 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\tegnologies;
+use App\Models\developersHasTegnologies;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TegnologiesFactory extends Factory
+use App\Models\Developers;
+
+class developersHasTegnologiesFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = tegnologies::class;
+    protected $model = developersHasTegnologies::class;
 
     /**
      * Define the model's default state.
@@ -23,6 +25,8 @@ class TegnologiesFactory extends Factory
     {
         return [
             //
+            // 'idDeveloperFk'=> rand(1,10),
+            // 'idTegnologyFk'=> rand(1,10)
         ];
     }
 }

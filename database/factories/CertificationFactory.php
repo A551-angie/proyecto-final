@@ -23,6 +23,8 @@ class CertificationFactory extends Factory
     {
         return [
             //
+        //    'certification',
+        //    'idDeveloperFk' 
         ];
     }
 }
