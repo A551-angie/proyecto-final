@@ -23,6 +23,9 @@ class DevelopersHasVacanciesFactory extends Factory
     {
         return [
             //
+            // 'idVacancyFk',
+            // 'idDeveloperFk'
+        
         ];
     }
 }

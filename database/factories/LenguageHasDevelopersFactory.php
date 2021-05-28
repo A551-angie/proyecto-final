@@ -23,6 +23,8 @@ class LenguageHasDevelopersFactory extends Factory
     {
         return [
             //
+            // 'idLenguageFk',
+            // 'idDeveloperFk'
         ];
     }
 }

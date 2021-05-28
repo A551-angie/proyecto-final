@@ -23,6 +23,8 @@ class LevelLangsFactory extends Factory
     {
         return [
             //
+            // 'level_lang',
+            // 'idLenguageFk'
         ];
     }
 }

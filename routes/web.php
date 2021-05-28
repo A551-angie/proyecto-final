@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\HomeController;
-
-
+use App\Http\Controllers\DeveloperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +40,5 @@ Route::get('/developer/seeVacancies',function(){
     return view ('developer.seeVacancies');
 
 });
+
+Route::get('Developer',DeveloperController::class);

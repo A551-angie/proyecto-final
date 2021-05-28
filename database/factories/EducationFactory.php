@@ -23,9 +23,9 @@ class EducationFactory extends Factory
     {
         return [
             //datos falsos
-            'nameEducation'=>$this-> faker-> word,
+            // 'nameEducation'=>$this-> faker-> word,
             
-            'level'=>$this -> faker -> sentence,
+            // 'level'=>$this -> faker -> sentence,
 
 
         ];
