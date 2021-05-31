@@ -242,22 +242,35 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'developers',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'developerpermi',
         ],
         [
-            'text' => 'Publica una vacante',
+            'text' => 'ver vacantes',
             'url'  => 'dashboard',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-clipboard-list',
             'can' => 'developerpermi',
         ],
         [
+
             'text' => 'ver vacantes publicadas',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'recruiterpermi',
+        ],
+        [
+            'text' => 'tomar vacante',
+            'url'  => 'dashboard',
+            'icon' => 'fas fa-handshake',
+            'can' => 'developerpermi',
+        ],
+        [
+            'text' => 'enviar proyecto',
+            'url'  => 'dashboard',
+            'icon' => 'fas fa-laptop-code',
+            'can' => 'developerpermi',
         ],
         
        
