@@ -25,6 +25,8 @@ class VacanciesController extends Controller
     public function create()
     {
         //
+        //$vacancy = vacancies::all();
+        //return View::make('admin')->with('vacancies', $vacancies);
     }
 
     /**
