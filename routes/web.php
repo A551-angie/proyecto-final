@@ -41,4 +41,8 @@ Route::get('/recruiter/create', function () {
 
 // });
 
-Route::resource('/developer/index', DeveloperController::class);
+Route::get('/developer/index', [DeveloperController::class,'index'])->name('developer.index');
+
+Route::get('/developer/create', [DeveloperController::class,'create'])->name('developer.create');
+
+Route::get('/developer/developer', [DeveloperController::class,'developer'])->name('developer.developer');
