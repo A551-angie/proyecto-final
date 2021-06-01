@@ -6,18 +6,37 @@
 <h1>vancantes</h1>
 @stop
 
-@section('content')
+    @section('content')
+
+        <a href=""></a>
+        <ul>
+            @foreach ($developers as $developer)
+                <li>
+                    {{$developer->experience}}
+                </li>
+                
+            @endforeach
+        </ul>
+
+        {{-- paginacion de contenidos --}}
+
+        {{$developers-> links()}}
+        
+
+
+    
 
 
 @stop
 
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
 
+@stop
 @section('js')
 <script>
 console.log('Hi!');
 </script>
-@stop
+
+
 
