@@ -47,7 +47,7 @@ class VacanciesController extends Controller
         // ]+ $post=$request->all());
 
         $datosVacancie = request()->except('_token');
-        // vacancies::insert($datosVacancie);
+        vacancies::insert($datosVacancie);
         return response()->json($datosVacancie);
 
        

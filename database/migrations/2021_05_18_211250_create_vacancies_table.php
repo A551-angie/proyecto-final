@@ -22,7 +22,7 @@ class CreateVacanciesTable extends Migration
             $table->string('currency','200');
             $table->mediumText('descriptionVacancy');
             $table->string('state','1');
-            $table->date('endDate');
+            $table->dateTime('endDate');
             $table->unsignedInteger('idCategoryVacancyFK');
             $table->foreign('idCategoryVacancyFK')->references('id')->on('category_vacancies');
             $table->unsignedInteger('idRecruiterFK');
