@@ -15,7 +15,7 @@ class CreateTegnologiesTable extends Migration
     {
         Schema::create('tegnologies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nameTegnology','100');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }

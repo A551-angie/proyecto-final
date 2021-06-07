@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\vacancies;
 use Illuminate\Http\Request;
 
+
 class VacanciesController extends Controller
 {
     /**
@@ -12,9 +13,15 @@ class VacanciesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function vacancy(vacancies $vacancy)
     {
+
         return view('recruiter.index');
+
+        $this->authorize('published', $vacancy);
+
+        return view('vacancy', compact('vacancy'));
+
     }
 
     /**

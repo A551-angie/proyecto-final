@@ -250,7 +250,7 @@ return [
         [
             'text' => 'ver vacantes',
             'url'  => 'dashboard',
-            'icon' => 'fas fa-clipboard-list',
+            'icon' => 'fas fa-fw fa-clipboard-list',
             'can' => 'developerpermi',
         ],
         [
@@ -263,16 +263,10 @@ return [
         [
             'text' => 'tomar vacante',
             'url'  => 'dashboard',
-            'icon' => 'fas fa-handshake',
+            'icon' => 'fas fa-fw fa-handshake',
             'can' => 'developerpermi',
         ],
-        [
-            'text' => 'enviar proyecto',
-            'url'  => 'dashboard',
-            'icon' => 'fas fa-laptop-code',
-            'can' => 'developerpermi',
-        ],
-        
+       
        
     ],
 
