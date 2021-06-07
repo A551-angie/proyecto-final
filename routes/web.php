@@ -5,6 +5,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\DeveloperController;
+use App\Http\Controllers\VacanciesController;
 
 /*
 |--------------------------------------------------------------------------

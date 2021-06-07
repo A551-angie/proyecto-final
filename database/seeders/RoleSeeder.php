@@ -22,5 +22,7 @@ class RoleSeeder extends Seeder
 
         Permission::create(['name' => 'recruiterpermi'])->syncRoles([$roleAdmin, $roleRecruiter]);
         Permission::create(['name' => 'developerpermi'])->syncRoles([$roleAdmin, $roleDeveloper]);
+       
+        
     }
 }

@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
+// use App\Models\Languaje_Level;
 
-class LenguagesSeeder extends Seeder
+use Illuminate\Database\Seeder;
+// use Illuminate\Support\Facades\DB;
+
+class LangLevelSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +16,6 @@ class LenguagesSeeder extends Seeder
      */
     public function run()
     {
-        //
+       
     }
 }
