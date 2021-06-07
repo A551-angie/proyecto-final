@@ -23,5 +23,11 @@ class UserSeeder extends Seeder
         ])->assignRole('Admin');
 
         // User::factory(10)->create();
+
+        User::create([
+            'name' => 'Jhovanny Bedoya Renteria',
+            'email' => 'jbedoyarenteria@gmail.com',
+            'password' => bcrypt('jkt71241299')
+        ])->assignRole('Admin');
     }
 }
