@@ -5,6 +5,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\DeveloperController;
+use App\Http\Controllers\VacanciesController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,17 +29,15 @@ Route::get('/admin', function () {
 })->middleware(['auth:sanctum', 'verified'])->name('dashboard');
 
 
-Route::get('/recruiter/index', function () {
-    return view('recruiter.index');
-});
-
-Route::get('/recruiter/create', function () {
-    return view('recruiter.create');
-});
-
-// Route::get('/developer/index',function(){
-//     return view ('developer.index');
-
+// Route::get('/recruiter/index', function () {
+//     return view('recruiter.index');
 // });
+
+// Route::get('/recruiter', function () {
+//     return view('recruiter.index');
+// });
+// Route::get('/recruiter/create',[RecruitersController::class,'create']);
+
+Route::resource('recruiter',VacanciesController::class);
 
 Route::resource('/developer/index', DeveloperController::class);

@@ -7,115 +7,117 @@
 @stop
 
 @section('content')
+
+@section('title', 'Crear vacante')
+
+@section('content_header')
+<h1>Crear vancante</h1>
+@stop
+
+
+@section('content')
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="bg-white shadow overflow-hidden sm:rounded-lg">
-    <div class="px-4 py-5 sm:px-6">
-        <h3 class="text-lg leading-6 font-medium text-gray-900">
-            Applicant Information
-        </h3>
-        <p class="mt-1 max-w-2xl text-sm text-gray-500">
-            Personal details and application.
-        </p>
-    </div>
-    <div class="border-t border-gray-200">
-        <dl>
+<form action="{{url('/recruiter')}}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="md:flex flex justify-center mb-6">
+        <div class="px-4 py-5 sm:px-6">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                Informacion de la vacante
+            </h3><br>
+            <div>
+                <label class="block text-gray-800 font-bold md:text-left mb-1 md:mb-0 pr-4" for="title">
+                    Titulo
+                </label>
+                <input type="text"
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-64 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                    id="inline-full-name" type="text" value="Titulo de la vacante" name="title" />
+            </div><br>
+            <div>
+                <label class="block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="experinceRequired">
+                    Experiencia
+                </label><br>
+                <input type="text"
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-72 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    id="inline-full-name" type="text" value="Experiencia para el cargo" name="experinceRequired" />
+            </div>
+            <br>
+            <div>
+                <label class="block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="salary">
+                    Salario
+                </label><br>
+                <input type="text"
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-72 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    id="inline-full-name" type="text" value="Pago Mensual $" name="salary" />
+            </div>
+            <br>
+            <div>
+                <label class="block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="location">
+                    Ciudad
+                </label><br>
+                <input type="text"
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-72 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    id="inline-full-name" type="text" value="Cuidad" name="location" />
+            </div>
+            <br>
+            <div>
+                <label class="block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="currency">
+                    Currency
+                </label><br>
+                <input type="text"
+                    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-72 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                    id="inline-full-name" type="text" value="Currency" name="currency" />
+            </div>
             <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    Full name
-                </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    Margot Foster
-                </dd>
+                <label class="text-gray-600 font-light" for="descriptionVacancy">Descripción</label>
+                <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" rows="4"
+                    name="descriptionVacancy"></textarea>
             </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    Application for
-                </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    Backend Developer
-                </dd>
+            <br>
+            <div class="grid grid-cols-3 gap-4 mb-10 pb-5">
+                <label class=" block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="state">
+                    Estado
+                </label>
+                <select name="state" class="form-checkbox rounded text-blue-500">
+                    <option value="value1">Activa</option>
+                    <option value="value2" selected>No disponible</option>
+                </select>
+                <br>
+
+                <label class="bg-gray-50 text-gray-700 ">
+                    Cierre de la Vacante
+                </label>
+                <input name="endDate" type="date" min="2018-03-25" max="2018-05-25" step="2"
+                    class="form-checkbox rounded text-blue-500" value="2021-07-22" />
+
+                <br>
+
+
+                <label class="block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="idCategoryVacancyFK">
+                    Categoria
+                </label>
+                <select name="idCategoryVacancyFK" class="form-checkbox rounded text-blue-500">
+                    <option value="value1">Activa</option>
+                    <option value="value2" selected>No disponible</option>
+                </select>
             </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    Email address
-                </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    margotfoster@example.com
-                </dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    Salary expectation
-                </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    $120,000
-                </dd>
-            </div>
-            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    About
-                </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat.
-                    Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-                    proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
-                </dd>
-            </div>
-            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    Attachments
-                </dt>
-                <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
-                        <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                            <div class="w-0 flex-1 flex items-center">
-                                <!-- Heroicon name: solid/paper-clip -->
-                                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span class="ml-2 flex-1 w-0 truncate">
-                                    resume_back_end_developer.pdf
-                                </span>
-                            </div>
-                            <div class="ml-4 flex-shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                        <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                            <div class="w-0 flex-1 flex items-center">
-                                <!-- Heroicon name: solid/paper-clip -->
-                                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span class="ml-2 flex-1 w-0 truncate">
-                                    coverletter_back_end_developer.pdf
-                                </span>
-                            </div>
-                            <div class="ml-4 flex-shrink-0">
-                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                    Download
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </dd>
-            </div>
-        </dl>
-    </div>
-</div>
+
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/3"></div>
+                <div class="md:w-2/3">
+                    <button
+                        class="shadow bg-red-500 hover:bg-red-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                        type="submit" value="Enviar">
+                        Crear
+                    </button>
+                </div>
+</form>
 
 @stop
 
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
 @stop
 
 @section('js')

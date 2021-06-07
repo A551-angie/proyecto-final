@@ -14,7 +14,7 @@ class RecruitersController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -24,7 +24,7 @@ class RecruitersController extends Controller
      */
     public function create()
     {
-        //
+        // return view('recruiter.create');
     }
 
     /**
@@ -35,7 +35,9 @@ class RecruitersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $datosVacancie = request()->all();
+        // $datosVacancie = request()->except('_token');
+        // return response()->json($datosVacancie);
     }
 
     /**

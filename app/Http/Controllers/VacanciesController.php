@@ -14,7 +14,7 @@ class VacanciesController extends Controller
      */
     public function index()
     {
-        //
+        return view('recruiter.index');
     }
 
     /**
@@ -24,9 +24,7 @@ class VacanciesController extends Controller
      */
     public function create()
     {
-        //
-        //$vacancy = vacancies::all();
-        //return View::make('admin')->with('vacancies', $vacancies);
+        return view('recruiter.create');
     }
 
     /**
@@ -37,8 +35,18 @@ class VacanciesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // vacancies::create([
+        //     'user_id'=> auth()->user()->id
+        // ]+ $post=$request->all());
+
+        $datosVacancie = request()->except('_token');
+        // vacancies::insert($datosVacancie);
+        return response()->json($datosVacancie);
+
+       
     }
+
+
 
     /**
      * Display the specified resource.

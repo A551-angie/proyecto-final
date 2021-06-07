@@ -9,6 +9,12 @@ class vacancies extends Model
 {
     use HasFactory;
 
+    protected $table='vacancies';
+    protected $primaryKey="id";
+    protected $fillable = [
+        'title', 'esperienceRequired', 'salary','location','currency', 'descriptionVacancy','state', 'endDate',
+    ];
+
     public function recruiter(){
 
         return $this->belongsTo(recruiter::class);
