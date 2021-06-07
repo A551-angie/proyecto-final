@@ -10,30 +10,39 @@
             @csrf
 
             <div>
-                <x-jet-label for="name" value="{{ __('Nombres y Apellidos') }}" />
+                <x-jet-label for="name" value="{{ __('Nombres y Apellidos:') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Correo Electrónico') }}" />
+                <x-jet-label for="email" value="{{ __('Correo Electrónico:') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Contraseña') }}" />
+                <x-jet-label for="password" value="{{ __('Contraseña:') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirme Contraseña') }}" />
+                <x-jet-label for="password_confirmation" value="{{ __('Confirme Contraseña:') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="role_id" value="{{ __('Registrarme como:') }}" />
+                <select class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full text-sm text-gray-600" name="role_id" id="role">
+                    <option value="" disabled selected hidden>Selecciona la acción</option>
+                    <option value="reclutador">Reclutador</option>
+                    <option value="persona">Desarrollador</option>
+                </select>
             </div>
            <!-- <div class="mt-4">
                 <input type="radio" id="male" name="role_id" value="recruiter" required>
                 <label for="male">Empresa</label><br>
                 <input type="radio" id="female" name="role_id" value="developers" required>
                 <label for="female">Desarrollador</label><br>
-            </div>-->  
+            </div>  
 
             <div>
                 <select class="border-gray-300 focus:border-indigo-300 
@@ -43,7 +52,7 @@
                     <option value="recruiter">Empresa</option>
                     <option value="developers">Desarrollador</option>
                 </select>
-            </div>
+            </div>-->
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
