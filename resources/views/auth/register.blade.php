@@ -33,8 +33,8 @@
                 <x-jet-label for="role_id" value="{{ __('Registrarme como:') }}" />
                 <select class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full text-sm text-gray-600" name="role_id" id="role">
                     <option value="" disabled selected hidden>Selecciona la acción</option>
-                    <option value="reclutador">Reclutador</option>
-                    <option value="persona">Desarrollador</option>
+                    <option value="Recruiter">Reclutador</option>
+                    <option value="Developers">Desarrollador</option>
                 </select>
             </div>
            <!-- <div class="mt-4">
