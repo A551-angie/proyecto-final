@@ -243,7 +243,7 @@ return [
         ],
         [
             'text' => 'developers',
-            'url'  => 'admin/settings',
+            'url'  => 'developer/index',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'developerpermi',
         ],
