@@ -13,17 +13,17 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Nunito', sans-serif;
         }
-
-        .bg-white {
-            opacity: .8;
-            border-radius: 0 0 10px 10px;
+        header {
+            background:url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         }
     </style>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
 
@@ -36,10 +36,10 @@
 
     <!-- ++++++++++++++++++++ HEADER BEGIN ++++++++++++++++++++ -->
     <div>
-        <header class="bg-gray-800" x-data="{ isOpen: false }">
+        <header x-data="{ isOpen: false }">
             <nav class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
                 <div class="flex items-center justify-between">
-                    <a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400" href="#">Brand</a>
+                    <a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400" href="#">LOGO</a>
 
                     <!-- Mobile menu button -->
                     <div @click="isOpen = !isOpen" class="flex md:hidden">
@@ -58,15 +58,14 @@
                     <a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400" href="#">Templates</a>
                     <a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400" href="#">Price</a>
                     <a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400" href="#">Help</a>
-                    <a class="px-4 py-1 text-sm font-medium text-center text-gray-200 transition-colors duration-300 transform border rounded hover:bg-indigo-400" href="#">Get In Touch</a>
                     @if (Route::has('login'))
                     @auth
-                    <a href="{{ url('/admin') }}" class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Mi perfil</a>
+                    <a href="{{ url('/admin') }}" class="px-4 py-1 text-sm font-medium text-center text-gray-200 transition-colors duration-300 transform border rounded hover:bg-indigo-400">Mi perfil</a>
                     @else
-                    <a href="{{ route('login') }}" class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Log in</a>
+                    <a href="{{ route('login') }}" class="px-4 py-1 text-sm font-medium text-center text-gray-200 transition-colors duration-300 transform border rounded hover:bg-indigo-400text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Log in</a>
 
                     @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400">Register</a>
+                    <a href="{{ route('register') }}" class="px-4 py-1 text-sm font-medium text-center text-gray-200 transition-colors duration-300 transform border rounded hover:bg-indigo-400">Register</a>
                     @endif
                     @endauth
                     @endif
@@ -75,12 +74,12 @@
 
             <section class="flex items-center justify-center" style="height: 500px;">
                 <div class="text-center">
-                    <p class="text-xl font-medium tracking-wider text-gray-300">Lorem ipsum dolor</p>
-                    <h2 class="mt-6 text-3xl font-bold text-white md:text-5xl">Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit</h2>
+                    <p class="text-xl font-medium tracking-wider text-gray-300">Publica ahora tu perfil</p>
+                    <h2 class="mt-6 mx-4 text-3xl font-bold text-white md:text-5xl">encuentra aquí las mejores ofertas disponibles en el mercado laboral</h2>
 
                     <div class="flex justify-center mt-8">
-                        <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500 mr-10" href="#">Get In Touch</a>
-                        <a class="px-8 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500" href="#">Get In Touch</a>
+                        <a class="px-2 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500 mr-4 md:mr-10 md:px-8" href="#">Publicar tu perfil</a>
+                        <a class="px-2 py-2 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500 md:px-8" href="#">Publicar vacante</a>
                     </div>
                 </div>
             </section>
@@ -88,20 +87,10 @@
         <!-- ++++++++++++++++++++ HEADER CLOSE ++++++++++++++++++++ -->
 
 
-        <!-- ++++++++++++++++++++ ABOUT US BEGIN ++++++++++++++++++++ -->
-        <section class="bg-white">
-            <div class="max-w-5xl px-6 pt-14 pb-6 mx-auto text-center">
-                <h2 class="text-3xl font-semibold text-gray-800">Lorem ipsum dolor sit amet, <br> consectetur adipiscing</h2>
-                <p class="max-w-lg mx-auto mt-4 text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </section>
-        <!-- ++++++++++++++++++++ ABOUT US CLOSE ++++++++++++++++++++ -->
-
-
         <!-- ++++++++++++++++++++ FILTER BEGIN ++++++++++++++++++++ -->
         <section>
             <div class="max-w-5xl px-6 pb-6 mx-auto">
-                <div class="container px-6 py-10 mx-auto">
+                <div class="container px-6 mx-auto">
                     <div class="grid gap-8 mt-6 sm:grid-cols-2 md:grid-cols-4">
                         <select class="border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                             <option>Eqypt</option>
@@ -118,7 +107,7 @@
                             <option>GRE2019</option>
                         </select>
                         <button class="px-4 py-2 font-medium tracking-wide text-white capitalize bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                            Search
+                            Filtrar
                         </button>
                     </div>
                 </div>
@@ -127,60 +116,97 @@
         <!-- ++++++++++++++++++++ FILTER CLOSE ++++++++++++++++++++ -->
 
 
-        <!--<div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
-            <div class="flex justify-center md:justify-end -mt-16">
-              <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
-            </div>
-            <div>
-              <h2 class="text-gray-800 text-3xl font-semibold"></h2>
-              <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</p>
-            </div>
-            <div class="flex justify-end mt-4">
-              <a href="#" class="text-xl font-medium text-indigo-500">John Doe</a>
-            </div>
-        </div>-->
-
-
-        <!-- ++++++++++++++++++++ IMAGES BEGIN ++++++++++++++++++++ -->
+        <!-- ++++++++++++++++++++ ABOUT US BEGIN ++++++++++++++++++++ -->
         <section class="bg-white">
-            <div class="max-w-5xl px-6 py-6 mx-auto">
-                <div class="items-center md:flex md:space-x-6">
-                    <div class="mt-8 md:mt-0 md:w-1/2">
-                        <div class="flex items-center justify-center">
-                            <div class="max-w-md">
-                                <img class="object-cover object-center w-full rounded-md shadow" style="height: 500px;" src="https://images.unsplash.com/photo-1618346136472-090de27fe8b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=673&q=80">
-                            </div>
-                        </div>
+            <div class="max-w-5xl px-6 pt-14 pb-6 mx-auto text-center">
+                <h2 class="text-3xl font-semibold text-gray-800">¿Por qué publicar en <I>platform name</I>?</h2>
+                <p class="max-w-lg mx-auto mt-4 text-gray-600">Estamos enfocados en la rama laboral del <B>desarrollo,</B> por lo que aquí encontrarás la recopilación de las mejores ofertas laborales de esta comunidad.</p>
+            </div>
+        </section>
+        <!-- ++++++++++++++++++++ ABOUT US CLOSE ++++++++++++++++++++ -->
+
+
+        <!-- ++++++++++++++++++++ PROCESS BEGIN ++++++++++++++++++++ -->
+        <section class="bg-gray-100">
+            <div class="max-w-5xl px-6 py-16 mx-auto">
+                <div class="md:flex md:justify-between">
+                    <h2 class="text-3xl font-semibold text-gray-800">¿Cómo lo hacemos?</h2>
+                    <!-- <a href="#" class="block mt-6 text-indigo-700 underline md:mt-0">Experienced team</a> -->
+                </div>
+
+                <div class="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
+                        <h2 class="text-xl font-medium text-gray-800">Paso 1</h2>
+                        <p class="max-w-md mt-4 text-gray-500"><B>Publica tu perfil</B> de la menra más completa posible, esto le dará más elementos a la empresa para escoger el talento de la manera más oportuna.</p>
                     </div>
 
-                    <div class="mt-8 md:mt-0 md:w-1/2">
-                        <div class="flex items-center justify-center">
-                            <div class="max-w-md">
-                                <img class="object-cover object-center w-full rounded-md shadow" style="height: 500px;" src="https://images.unsplash.com/photo-1618346136472-090de27fe8b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=673&q=80">
-                            </div>
-                        </div>
+                    <div class="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
+                        <h2 class="text-xl font-medium text-gray-800">Paso 2</h2>
+                        <p class="max-w-md mt-4 text-gray-500"><B>Postulate</B> a aquellas ofertas laborales que te llamen la atención y sean acordes a tu perfil.</p>
+                    </div>
+
+                    <div class="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
+                        <h2 class="text-xl font-medium text-gray-800">Paso 3</h2>
+                        <p class="max-w-md mt-4 text-gray-500">Realiza el <B>proceso de selección</B> de las empresas que se comuniquen contigo, y ya está <B>¡Firma la oportunidad de tu vida!</B></p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- ++++++++++++++++++++ PROCESS CLOSE ++++++++++++++++++++ -->
+
+
+        <!-- ++++++++++++++++++++ IMAGES BEGIN ++++++++++++++++++++ -->
+        <div>
+            <div class="block md:flex justify-between">
+                <div class="w-full lg:w-1/2 mb-4">
+                    <div class="bg-white overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="https://images.unsplash.com/photo-1457282367193-e3b79e38f207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1654&q=80" alt="">
+                        <div class="px-8     py-4 h-auto md:h-40 lg:h-48">
+                            <div class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Alcanza el trabajo de tus sueños
+                            </div>
+                            <div class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
+                                Obtén mejores ganancias trabajando en los proyectos que sueñas como desarrollador freelance.
+                            </div>
+                            <button class="px-4 py-2 my-6 font-medium tracking-wide text-white capitalize bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                Publica tu perfil
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 mb-4">
+                    <div class="bg-white overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+                        <div class="px-8 py-4 h-auto md:h-40 lg:h-48">
+                            <div class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Encuenta los mejores desarrolladores
+                            </div>
+                            <div class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
+                                Queremos que obtengas los mejores resultados, por eso aquí encontrarás los mejores desarrolladores para lograr el proyecto que planeas.
+                            </div>
+                            <button class="px-4 py-2 my-6 font-medium tracking-wide text-white capitalize bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                                Publica tu proyecto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ++++++++++++++++++++ IMAGES CLOSE ++++++++++++++++++++ -->
 
 
-        <!-- ++++++++++++++++++++ IMAGE FULL SCREEN BEGIN ++++++++++++++++++++ -->
+        <!-- ++++++++++++++++++++ IMAGE FULL SCREEN BEGIN ++++++++++++++++++++
         <section>
             <img class="object-cover object-center w-full mt-16 shadow h-80" src="https://images.unsplash.com/photo-1600069226367-412873fb0637?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
         </section>
-        <!-- ++++++++++++++++++++ IMAGE FULL SCREEN CLOSE ++++++++++++++++++++ -->
+        ++++++++++++++++++++ IMAGE FULL SCREEN CLOSE ++++++++++++++++++++ -->
 
 
         <!-- ++++++++++++++++++++ RECENT OFFERS BEGIN ++++++++++++++++++++ -->
         <section class="bg-white">
             <div class="max-w-5xl px-6 py-16 mx-auto text-center">
-                <h2 class="text-3xl font-semibold text-gray-800">Our Leadership</h2>
-                <p class="max-w-lg mx-auto mt-4 text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.</p>
+                <h2 class="text-3xl font-semibold text-gray-800">Ofertas más recientes</h2>
+                <p class="max-w-lg mx-auto mt-4 text-gray-600">¡Queremos que alcances tus propositos! Por eso aquí encontrás las mejores ofertas del mercado, especialmente clasificadas para tu perfil como desarrollador.</p>
 
                 <div class="grid gap-8 mt-6 md:grid-cols-2 lg:grid-cols-4">
                     <div>
@@ -410,7 +436,20 @@
 
 
 
-        <!-- <section class="bg-white">
+        <!-- <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+            <div class="flex justify-center md:justify-end -mt-16">
+              <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80">
+            </div>
+            <div>
+              <h2 class="text-gray-800 text-3xl font-semibold"></h2>
+              <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</p>
+            </div>
+            <div class="flex justify-end mt-4">
+              <a href="#" class="text-xl font-medium text-indigo-500">John Doe</a>
+            </div>
+        </div>
+        
+        <section class="bg-white">
             <div class="max-w-5xl px-6 py-16 mx-auto">
                 <div class="items-center md:flex md:space-x-6">
                     <div class="md:w-1/2">
@@ -503,31 +542,7 @@
             </div>
         </section>
 
-        <section class="bg-white">
-            <div class="max-w-5xl px-6 py-16 mx-auto">
-                <div class="md:flex md:justify-between">
-                    <h2 class="text-3xl font-semibold text-gray-800">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit, sed do eiusmod</h2>
-                    <a href="#" class="block mt-6 text-indigo-700 underline md:mt-0">Experienced team</a>
-                </div>
-
-                <div class="grid gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
-                    <div class="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
-                        <h2 class="text-xl font-medium text-gray-800">Audio</h2>
-                        <p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.</p>
-                    </div>
-
-                    <div class="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
-                        <h2 class="text-xl font-medium text-gray-800">Audio</h2>
-                        <p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.</p>
-                    </div>
-
-                    <div class="px-6 py-8 overflow-hidden bg-white rounded-md shadow-md">
-                        <h2 class="text-xl font-medium text-gray-800">Audio</h2>
-                        <p class="max-w-md mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <section class="bg-white">
             <div class="max-w-5xl px-6 py-16 mx-auto space-y-8 md:flex md:items-center md:space-y-0">
