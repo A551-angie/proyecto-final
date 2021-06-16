@@ -21,7 +21,7 @@ class CreateVacanciesTable extends Migration
             $table->string('location','200');
             $table->string('currency','200');
             $table->mediumText('descriptionVacancy');
-            $table->string('state','1');
+            $table->boolean('state','confirmed');
             $table->date('endDate');
             $table->unsignedInteger('idCategoryVacancyFK');
             $table->foreign('idCategoryVacancyFK')->references('id')->on('category_vacancies');
