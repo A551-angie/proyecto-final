@@ -16,7 +16,7 @@ class VacanciesController extends Controller
     public function vacancy(vacancies $vacancy)
     {
 
-        return view('recruiter.index');
+        return view('vacancies.index');
 
         $this->authorize('published', $vacancy);
 
@@ -29,9 +29,19 @@ class VacanciesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function index (){
+       
+        
+         return view('vacancies.index');
+
+        
+
+
+    }
+
     public function create()
     {
-        return view('recruiter.create');
+        return view('vacancies.create');
     }
 
     /**
@@ -46,11 +56,20 @@ class VacanciesController extends Controller
         //     'user_id'=> auth()->user()->id
         // ]+ $post=$request->all());
 
-        $datosVacancie = request()->except('_token');
-        vacancies::insert($datosVacancie);
-        return response()->json($datosVacancie);
-
-       
+        $vacancies = new vacancies();
+        
+            $vacancies-> title = $request-> title;
+            $vacancies-> experinceRequired = $request-> experinceRequired;
+            $vacancies-> salary = $request-> salary;
+            $vacancies-> location= $request-> location;
+            $vacancies-> currency= $request-> currency;
+            $vacancies-> descriptionVacancy = $request-> descriptionVacancy;
+            $vacancies-> state = $request-> state;
+            $vacancies-> endDate = $request-> endDate;
+            $vacancies-> idCategoryVacancyFK = $request-> idCategoryVacancyFK;
+            $vacancies-> idRecruiterFK = $request-> idRecruiterFK;
+            
+        $vacancies->save();
     }
 
 
@@ -63,7 +82,7 @@ class VacanciesController extends Controller
      */
     public function show(vacancies $vacancies)
     {
-        //
+        //return view('vacancies.show', compact('vacancy'));
     }
 
     /**

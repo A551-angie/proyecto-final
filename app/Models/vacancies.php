@@ -12,8 +12,9 @@ class vacancies extends Model
     protected $table='vacancies';
     protected $primaryKey="id";
     protected $fillable = [
-        'title', 'esperienceRequired', 'salary','location','currency', 'descriptionVacancy','state', 'endDate',
+        'title', 'esperienceRequired', 'salary','location','currency', 'descriptionVacancy','state', 
     ];
+    protected $dates = ['endDate'];
 
     public function recruiter(){
 
@@ -34,4 +35,20 @@ class vacancies extends Model
 
         
     }
+
+    public function user(){
+
+        return $this->belongsTo(User::class);
+
+        
+    }
+
+    public function getExcerptAttribute()
+    {
+        return substr($this->descriptionVacancy,0, 80). "...";
+    }
+
+        
+    
+
 }

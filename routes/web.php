@@ -32,19 +32,16 @@ Route::get('/admin', function () {
 })->middleware(['auth:sanctum', 'verified'])->name('dashboard');
 
 
-// Route::get('/recruiter/index', function () {
-//     return view('recruiter.index');
-// });
 
-// Route::get('/recruiter', function () {
-//     return view('recruiter.index');
-// });
-// Route::get('/recruiter/create',[RecruitersController::class,'create']);
+Route::get('/vacancies/index', [VacanciesController::class,'index'])->name('home');
 
-Route::resource('recruiter',VacanciesController::class);
+Route::get('/vacancies/create', [VacanciesController::class,'create'])->name('vacancies.create');
+
+Route::post('vacancies',[VacanciesController::class, 'store'])->name('vacancies.store');
+Route::get('/vacancies/developer', [DeveloperController::class,'developer'])->name('developer.developer');
+
+
 
 Route::get('/developer/index', [DeveloperController::class,'index'])->name('developer.index');
 
-Route::get('/developer/create', [DeveloperController::class,'create'])->name('developer.create');
-
-Route::get('/developer/developer', [DeveloperController::class,'developer'])->name('developer.developer');
+Route::get('/developer/create', [DeveloperController::class,'create'])->name('developer.create');Route::get('/developer/developer', [DeveloperController::class,'developer'])->name('developer.developer');

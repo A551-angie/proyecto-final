@@ -16,8 +16,9 @@
 
 
 @section('content')
+
 <!-- This example requires Tailwind CSS v2.0+ -->
-<form action="{{url('/recruiter')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('vacancies.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="md:flex flex justify-center mb-6">
         <div class="px-4 py-5 sm:px-6">
@@ -78,16 +79,15 @@
                     Estado
                 </label>
                 <select name="state" class="form-checkbox rounded text-blue-500">
-                    <option value="value1">Activa</option>
-                    <option value="value2" selected>No disponible</option>
+                    <option value="0">0</option>
+                    <option value="1" selected>1</option>
                 </select>
                 <br>
 
                 <label class="bg-gray-50 text-gray-700 ">
                     Cierre de la Vacante
                 </label>
-                <input name="endDate" type="date" min="2018-03-25" max="2018-05-25" step="2"
-                    class="form-checkbox rounded text-blue-500" value="2021-07-22" />
+                <input name="endDate" type="date" class="form-checkbox rounded text-blue-500" />
 
                 <br>
 
@@ -96,10 +96,21 @@
                     Categoria
                 </label>
                 <select name="idCategoryVacancyFK" class="form-checkbox rounded text-blue-500">
-                    <option value="value1">Activa</option>
-                    <option value="value2" selected>No disponible</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3" selected>3</option>
                 </select>
             </div>
+
+            <label class=" block text-gray-700 font-bold md:text-left mb-1 md:mb-0 pr-4" for="state">
+                Recruiterfk
+            </label>
+            <select name="idRecruiterFK" class="form-checkbox rounded text-blue-500">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3" selected>3</option>
+            </select>
+            <br>
 
             <div class="md:flex md:items-center">
                 <div class="md:w-1/3"></div>
