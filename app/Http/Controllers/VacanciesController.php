@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\vacancies;
 use Illuminate\Http\Request;
 
+
 class VacanciesController extends Controller
 {
     /**
@@ -12,11 +13,15 @@ class VacanciesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function vacancy(Vacancy $vacancy)
+    public function vacancy(vacancies $vacancy)
     {
+
+        return view('vacancies.index');
+
         $this->authorize('published', $vacancy);
 
         return view('vacancy', compact('vacancy'));
+
     }
 
     /**
@@ -24,11 +29,19 @@ class VacanciesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function index (){
+       
+        
+         return view('vacancies.index');
+
+        
+
+
+    }
+
     public function create()
     {
-        //
-        //$vacancy = vacancies::all();
-        //return View::make('admin')->with('vacancies', $vacancies);
+        return view('vacancies.create');
     }
 
     /**
@@ -39,8 +52,27 @@ class VacanciesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // vacancies::create([
+        //     'user_id'=> auth()->user()->id
+        // ]+ $post=$request->all());
+
+        $vacancies = new vacancies();
+        
+            $vacancies-> title = $request-> title;
+            $vacancies-> experinceRequired = $request-> experinceRequired;
+            $vacancies-> salary = $request-> salary;
+            $vacancies-> location= $request-> location;
+            $vacancies-> currency= $request-> currency;
+            $vacancies-> descriptionVacancy = $request-> descriptionVacancy;
+            $vacancies-> state = $request-> state;
+            $vacancies-> endDate = $request-> endDate;
+            $vacancies-> idCategoryVacancyFK = $request-> idCategoryVacancyFK;
+            $vacancies-> idRecruiterFK = $request-> idRecruiterFK;
+            
+        $vacancies->save();
     }
+
+
 
     /**
      * Display the specified resource.
@@ -50,7 +82,7 @@ class VacanciesController extends Controller
      */
     public function show(vacancies $vacancies)
     {
-        //
+        //return view('vacancies.show', compact('vacancy'));
     }
 
     /**
