@@ -256,13 +256,13 @@ return [
         [
 
             'text' => 'ver vacantes publicadas',
-            'url'  => 'admin/settings',
+            'url'  => '/vacancies/index',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'recruiterpermi',
         ],
         [
             'text' => 'tomar vacante',
-            'url'  => 'dashboard',
+            'url'  => '/vacancies/developer',
             'icon' => 'fas fa-fw fa-handshake',
             'can' => 'developerpermi',
         ],
