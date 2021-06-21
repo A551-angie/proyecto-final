@@ -1,4 +1,4 @@
-<!-- component -->
+{{-- <!-- component -->
 <div class="content">
     <div class="flex items-center justify-between w-full my-4 pl-4 sm:pr-4">
         <div class="mr-6">
@@ -133,4 +133,27 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+<div>
+    <!-- carta de mi elemento-->
+
+    <div class="bg-white shadow-lg rounded-lg px-4 py-6 text-center">
+
+        <a href=" {{ route('vacancies', $vacancies->title) }} ">
+
+            <h2 class="text-lg text-gray-600 truncate uppercase">{{ $vacancie->title }}</h2>
+
+            
+            <h3 class="text-md text-gray-500">{{ $vacancie->experinceRequired }}</h3>
+
+            <h2 class="text-lg text-gray-600 truncate uppercase">{{ $vacancie->salary }}</h2>
+
+            <h3 class="text-md text-gray-500">{{ $course->excerpt }}</h3>
+
+            <img src="{{ $course->user->avatar }}" class="rounded-full mt-4 mx-auto h-16 w-16" alt="">
+            
+        </a>
+    </div>
+  
 </div>
