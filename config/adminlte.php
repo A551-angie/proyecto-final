@@ -249,7 +249,7 @@ return [
         ],
         [
             'text' => 'ver vacantes',
-            'url'  => 'dashboard',
+            'url'  => '/vacancies/index',
             'icon' => 'fas fa-fw fa-clipboard-list',
             'can' => 'developerpermi',
         ],
