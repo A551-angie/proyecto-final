@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+//Este oyente de eventos enviará el enlace de verificación por correo electrónico al usuario.
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

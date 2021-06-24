@@ -10,13 +10,16 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+use Spatie\Permission\Traits\HasRoles;
+
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -58,4 +61,25 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function developer(){
+
+        return $this->hasOne(Developers::class);
+        
+    }
+
+
+    public function recruiter(){
+
+        return $this->hasOne(recruiters::class);
+
+    }
+
+    //public function permission(){
+    //    return $this->hasOne(permission::class);
+    //}
+
+    public function adminlte_desc(){
+        return 'developers/recruiter';
+    }
 }

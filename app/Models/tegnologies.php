@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class tegnologies extends Model
 {
     use HasFactory;
+
+    public function vacancies(){
+
+        return $this->belongsToMany(vacancies::class);
+
+        
+    }
 }

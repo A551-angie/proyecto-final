@@ -22,7 +22,8 @@ class EducationHasDevelopersFactory extends Factory
     public function definition()
     {
         return [
-            //
+            //  'idEducationFk',
+            //  'idDeveloperFk'    
         ];
     }
 }

@@ -15,9 +15,10 @@ class CreateCountriesTable extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('country','200');
-            $table->unsignedInteger('idUserFK');
-            $table->foreign('idUserFK')->references('id')->on('users');
+            $table->string('short_description');
+            $table->longtext('long_description');
+            //$table->unsignedInteger('idUserFK');
+            //$table->foreign('idUserFK')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class levelLangs extends Model
 {
     use HasFactory;
+
+    public function lenguages(){
+
+        return $this->belongTo(lenguages::class);
+
+        
+    }
 }
