@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class skulls extends Model
 {
     use HasFactory;
+
+    public function developers(){
+
+        return $this->belongsToMany(Developers::class);
+
+        
+    }
 }

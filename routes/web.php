@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Admin\HomeController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +22,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+/* Route::get('',[HomeController::class, 'index']); */
+
+Route::get('/admin', function () {
+    return view('admin.index');
+})->middleware(['auth:sanctum', 'verified'])->name('dashboard');
+
+
+Route::get('/recruiter/index', function () {
+    return view('recruiter.index');
+});
+
+Route::get('/recruiter/create', function () {
+    return view('recruiter.create');
+});

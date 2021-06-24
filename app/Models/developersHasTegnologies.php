@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class developersHasTegnologies extends Model
 {
     use HasFactory;
+
+    
 }
