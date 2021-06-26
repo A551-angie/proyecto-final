@@ -33,28 +33,12 @@
                 <x-jet-label for="role_id" value="{{ __('Registrarme como:') }}" />
                 <select class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block mt-1 w-full text-sm text-gray-600" name="role_id" id="role">
                     <option value="" disabled selected hidden>Selecciona la acción</option>
-<<<<<<< HEAD
                     <option value="Recruiter">Reclutador</option>
                     <option value="Developers">Desarrollador</option>
 
                 </select>
             </div>
-           <!-- <div class="mt-4">
-                <input type="radio" id="male" name="role_id" value="recruiter" required>
-                <label for="male">Empresa</label><br>
-                <input type="radio" id="female" name="role_id" value="developers" required>
-                <label for="female">Desarrollador</label><br>
-            </div>  
-
-            <div>
-                <select class="border-gray-300 focus:border-indigo-300 
-                focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md 
-                shadow-sm block mt-1 w-full text-sm text-gray-600" name="role_id" id="role_id" required>
-                    <option value="" disabled selected hidden>Selecciona la acción</option>
-                    <option value="recruiter">Empresa</option>
-                    <option value="developers">Desarrollador</option>
-                </select>
-            </div>-->
+        
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
